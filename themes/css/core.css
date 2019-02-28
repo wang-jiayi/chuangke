@@ -548,3 +548,11 @@ table {
 .red_bg{ width:20px; height: 20px; background: red; color:#fff; border-radius: 15px; position: absolute; top:-10px; left: 12px; font-size: 14px; font-weight: bold; text-align: center; line-height: 16px;}
 .message_left_tit{ background: #FF5E53; color:#fff; font-size: 25px; padding-left:10px;}
 .register-a{ margin-top:-30px; background: #FF6600; border:#FF6600;}
+#fileBox{margin:/*1*/rem 0;} 
+#fileBox label{	border: 1px dashed #ddd; display:block;	float:left;	height:60px; width:60px; background:url(../img/add-img.jpg) no-repeat center; margin-left: .17rem; margin-bottom:10px;} 
+#fileBox .file-btn{	height:50px; width:50px; margin:0 .5rem .5rem 0;opacity:0;} 
+#fileBox .review-box{ display:block; float:left; margin-left: .17rem;} 
+#fileBox .review-box img{ height:60px; width:60px; margin:0 .1rem .2rem 0;} 
+#fileBox .prev-item{ position:relative;display:inline-block;} 
+#fileBox .prev-item .closebtn{ position:absolute; right: -1px; top: -4px; display: block; height: 14px;	width: 14px; color: #fff; font-size: 16px;	line-height:14px; text-align: center; background: red;	border-radius: 10px;}
+#fileBox .prev-item .closebtn {	position: absolute;	right: 7px; top: -4px; display: block;	height: 14px; width: 14px;	color: #fff; font-size: 16px; line-height: 14px; text-align: center; background: #8E8E93; border-radius: 10px;} 

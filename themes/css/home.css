@@ -2213,7 +2213,6 @@ input.check:checked {
 	text-align: center;
 	font-size: 14px;
 	color: #da4644;
-	border: 1px solid #da4644;
 	border-radius: 3px;
 	display: block;
 }

@@ -68,6 +68,7 @@ $(function(){
     }
     $(".shopCheck").change(); //执行店铺全选的操作
   });
+  
 	//计算
   function TotalPrice() {
     var allprice = 0; //总价

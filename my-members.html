@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimal-ui"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+	<meta name="format-detection" content="telephone=no, email=no"/>
+	<meta charset="UTF-8">
+	<title>我的订单</title>
+	<link rel="stylesheet" href="themes/css/core.css">
+	<link rel="stylesheet" href="themes/css/icon.css">
+	<link rel="stylesheet" href="themes/css/home.css">
+	<link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link href="iTunesArtwork@2x.png" sizes="114x114" rel="apple-touch-icon-precomposed">
+
+</head>
+<body>
+
+	<header class="aui-header-default aui-header-fixed aui-header-bg">
+		<a href="javascript:history.back(-1)" class="aui-header-item">
+			<i class="aui-icon aui-icon-back-white"></i>
+		</a>
+		<div class="aui-header-center aui-header-center-clear">
+			<div class="aui-header-center-logo">
+				<div class="aui-car-white-Typeface">人员架构</div>
+			</div>
+		</div>
+		<a href="#" class="aui-header-item-icon"   style="min-width:0">
+			<i class="aui-icon aui-icon-search"></i>
+		</a>
+	</header>
+
+	<!--body区-->
+	<div class="my-members-body">
+		<div class="my-members-body-item">
+			<div class="my-members-body-leader">
+				<img src="http://img4.duitang.com/uploads/item/201412/24/20141224224554_SuYth.thumb.700_0.jpeg" />
+				<span class="my-members-body-leader-name">张三</span>
+				<span class="my-members-body-leader-number">10人</span>
+				<span class="my-members-body-leader-star">★★★★★</span>
+			</div>
+			<!-- <p class="my-members-body-heng"></p> -->
+			<ul id="my-members-body-members">
+				<li>
+					<a href="my-members.html">
+						<!-- <span class="my-members-body-member-triangle">▷</span> -->
+						<img src="http://img4.duitang.com/uploads/item/201406/07/20140607131350_mUGGB.thumb.600_0.jpeg" /></br>
+						<span class="my-members-body-member-name">李四</span></br>
+						<span class="my-members-body-member-number">3人</span>
+						<span class="my-members-body-member-star">★★</span>
+					</a>
+				</li>
+				<li class="my-members-body-members-item-background">
+					<a href="my-members.html">
+						<!-- <span class="my-members-body-member-triangle">▷</span> -->
+						<img src="http://img4.duitang.com/uploads/item/201304/17/20130417000205_8rHiU.thumb.700_0.jpeg" /></br>
+						<span class="my-members-body-member-name">王五</span></br>
+						<span class="my-members-body-member-number">3人</span>
+						<span class="my-members-body-member-star">★★</span>
+					</a>
+				</li>
+				<li>
+					<a href="my-members.html">
+						<!-- <span class="my-members-body-member-triangle">▷</span> -->
+						<img src="http://img5.duitang.com/uploads/item/201410/05/20141005190442_nuceP.thumb.700_0.jpeg" /></br>
+						<span class="my-members-body-member-name">赵六</span></br>
+						<span class="my-members-body-member-number">3人</span>
+						<span class="my-members-body-member-star">★★</span>
+					</a>
+				</li>
+				<li class="my-members-body-members-item-background">
+					<a href="my-members.html">
+						<!-- <span class="my-members-body-member-triangle">▷</span> -->
+						<img src="http://img4.duitang.com/uploads/item/201407/19/20140719130553_ShUBe.thumb.700_0.jpeg" /></br>
+						<span class="my-members-body-member-name">田七</span></br>
+						<span class="my-members-body-member-number">3人</span>
+						<span class="my-members-body-member-star">★★★</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+
+	<script type="text/javascript" src="themes/js/jquery.min.js"></script>
+	<script type="text/javascript" src="themes/js/aui.js"></script>
+	<script type="text/javascript" >
+        /**
+         * Javascript API调用Tab
+         */
+        !function ($) {
+            var $tab = $('#J_Tab');
+
+            $tab.tab({
+                nav: '.tab-nav-item',
+                panel: '.tab-panel-item',
+                activeClass: 'tab-active'
+            });
+
+			/*
+			 $tab.find('.tab-nav-item').on('open.ydui.tab', function (e) {
+			 console.log('索引：%s - [%s]正在打开', e.index, $(this).text());
+			 });
+			 */
+
+            $tab.find('.tab-nav-item').on('opened.ydui.tab', function (e) {
+                console.log('索引：%s - [%s]已经打开了', e.index, $(this).text());
+            });
+
+			
+
+			var data = {
+				id = 1,
+				name = '张三',
+				children = [
+					{
+						id = 2,
+						name = '张三下级一号-赵四儿',
+						children = [
+							{
+								id = 8,
+								name = '赵四儿下级一号'
+							},
+							{
+								id = 9,
+								name = '赵四儿下级二号'
+							},
+							{
+								id = 10,
+								name = '赵四儿下级三号'
+							},{
+								id = 11,
+								name = '赵四儿下级四号'
+							}
+						]
+					},
+					{
+						id = 3,
+						name = '张三下级二号'
+					},
+					{
+						id = 4,
+						name = '张三下级三号'
+					},
+					{
+						id = 5,
+						name = '张三下级四号',
+						children = []
+					},
+					{
+						id = 6,
+						name = '张三下级五号'
+					},
+					{
+						id = 7,
+						name = '张三下级六号'
+					}
+				]
+			};
+
+        }(jQuery);
+	</script>
+
+</body>
+</html>
